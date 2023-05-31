@@ -1,0 +1,177 @@
+@import url(preflight.css);
+@import 'npm:@splidejs/splide/dist/css/splide.min.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  }
+}
+
+@layer components {
+}
+
+@layer utilities {
+}
+
+/* __________________________________________________________________________ menu ___________________________________________________________ */
+.nav {
+  --transition-duration: 250ms;
+  --transition-timing-function: ease-in;
+  @apply fixed z-30 h-24 w-full;
+  transition: all var(--transition-duration) var(--transition-timing-function);
+}
+
+.menu-items {
+  @apply mr-4  h-full items-center justify-center gap-4 text-center md:flex md:opacity-100;
+}
+
+.menu-item {
+  @apply max-h-0 align-middle opacity-0 hover:text-primary md:max-h-10 md:opacity-100;
+  transition-property: opacity, max-height;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.logo {
+  @apply absolute  flex  items-center gap-4;
+  top: 26;
+  left: 18px;
+  transition-property: transform, opacity;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.nav.is-open {
+  @apply !h-72 bg-menubg;
+}
+
+.nav.is-open .menu-item {
+  @apply max-h-10 opacity-100;
+}
+
+.nav.is-open .logo {
+  /* @apply hidden; */
+  opacity: 0;
+  transform: translate(-50%, 0) !important;
+}
+
+/* nav.is-open li {
+  font-size: 1.5em !important;
+} */
+
+.nav.reduced {
+  @apply h-12 bg-menubg;
+}
+
+.nav.reduced .hamburger {
+  transform: translate(15, -23px);
+}
+
+.nav.reduced .logo {
+  transform: translate(-12px, -21px);
+}
+
+.hamburger {
+  @apply m-0 inline-block cursor-pointer overflow-visible border-0 bg-transparent
+  text-inherit;
+  padding: 15px 15px;
+  font: inherit;
+  text-transform: none;
+  transition: opacity 150ms linear, filter 150ms linear,
+    transform var(--transition-duration) var(--transition-timing-function);
+}
+.hamburger:hover {
+  @apply opacity-70;
+}
+.hamburger.is-active:hover {
+  @apply opacity-70;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  @apply bg-white;
+}
+
+.hamburger-box {
+  @apply relative inline-block h-6 w-10;
+}
+
+.hamburger-inner {
+  @apply top-1/2 block;
+  margin-top: -2px;
+}
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after {
+  @apply absolute h-1 w-10 rounded bg-white 
+  transition-transform duration-150;
+  transition-timing-function: ease;
+}
+.hamburger-inner::before,
+.hamburger-inner::after {
+  content: '';
+  display: block;
+}
+.hamburger-inner::before {
+  top: -10px;
+}
+.hamburger-inner::after {
+  bottom: -10px;
+}
+/* ___________________________________________ transformation ______________________________ */
+.hamburger--slider .hamburger-inner {
+  top: 2px;
+}
+.hamburger--slider .hamburger-inner::before {
+  top: 10px;
+  transition-property: transform, opacity;
+  transition-timing-function: ease;
+  transition-duration: 0.15s;
+}
+.hamburger--slider .hamburger-inner::after {
+  top: 20px;
+}
+
+.hamburger--slider.is-active .hamburger-inner {
+  transform: translate3d(0, 10px, 0) rotate(45deg);
+}
+.hamburger--slider.is-active .hamburger-inner::before {
+  transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+  opacity: 0;
+}
+.hamburger--slider.is-active .hamburger-inner::after {
+  transform: translate3d(0, -20px, 0) rotate(-90deg);
+}
+
+/* _____________________________________________________ animations ________________________________________________ */
+
+@keyframes fade-from-left {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-from-right {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-from-bottom {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
