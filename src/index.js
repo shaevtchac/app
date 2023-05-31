@@ -11,7 +11,6 @@ menuButton.addEventListener('click', function () {
   nav.classList.toggle('is-open');
   const ariaExpanded = this.getAttribute('aria-expanded') === 'true';
   this.setAttribute('aria-expanded', !ariaExpanded);
-  // menuItems.classList.toggle('hidden');
 });
 
 // ________ observer
@@ -36,7 +35,6 @@ menuItems.addEventListener('click', () => {
   menuButton.classList.remove('is-active');
   nav.classList.remove('is-open');
   menuButton.setAttribute('aria-expanded', false);
-  // menuItems.classList.add('hidden');
 });
 
 // _______________________________________________________________ animations _______________________________________________________________
