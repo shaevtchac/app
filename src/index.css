@@ -12,6 +12,12 @@
 }
 
 @layer components {
+  .h3 {
+    @apply font-semibold;
+  }
+  .h2 {
+    @apply text-[2em] font-bold;
+  }
   .btn-primary {
     @apply rounded-lg border-2 border-white bg-white px-9 py-1 font-semibold text-black;
   }
