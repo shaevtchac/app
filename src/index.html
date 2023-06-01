@@ -63,8 +63,8 @@
       </h1>
       <p class="mt-3 mb-6" data-animation="fade-in" data-duration="1s" data-delay="500ms">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       <div class="flex gap-4 flex-wrap justify-center">
-        <button class="btn-primary" data-animation="fade-from-left" data-delay="500ms">Download free</button>
-        <button class="btn-secondary" data-animation="fade-from-right" data-delay="500ms">Contact Us</button>
+        <button class="btn-primary" data-animation="pulse" data-delay="1s">Download free</button>
+        <button class="btn-secondary" data-animation="pulse" data-delay="1250ms">Contact Us</button>
       </div>
       <img src="img/Smartphone.png?as=webp" alt="Smartphone" class="mx-auto mt-20"/>
     </header>
@@ -124,6 +124,7 @@
           alias ut.
         </p>
         <button
+          data-animation="pulse" data-delay="300ms" data-timing-function="ease-in-out"
           class="justify-self-end rounded-lg bg-primary px-8 py-2 font-bold text-white"
         >
           Download Free
@@ -278,9 +279,11 @@
         </div>
       </div>
       <button
-        data-animation="fade-in"
+      id="get-app-button"
+        data-animation="pulse-translated"
+        data-timing-function="ease-in-out"
         data-delay="1.2s"
-        class="absolute left-1/2 top-full block -translate-x-1/2 -translate-y-1/2 bg-gradient-to-t from-[#f5317f] to-[#ff7c6e] px-12 py-3 font-bold text-white"
+        class=" absolute left-1/2 top-full block -translate-x-1/2 -translate-y-1/2 bg-gradient-to-t from-[#f5317f] to-[#ff7c6e] px-12 py-3 font-bold text-white"
       >
         GET THE APP TODAY
       </button>
@@ -332,7 +335,7 @@
           placeholder="Your email address"
           class="bg-[#f6f7fb] p-3"
         />
-        <button type="submit" class="bg-primary px-6 py-3">COUNT ME IN</button>
+        <button data-animation="pulse" data-timing-function="ease-in-out" data-delay="300ms" type="submit" class="bg-primary px-6 py-3">COUNT ME IN</button>
       </form>
     </section>
 

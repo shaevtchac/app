@@ -1,5 +1,5 @@
 @import url(preflight.css);
-@import 'npm:@splidejs/splide/dist/css/splide.min.css';
+/* @import 'npm:@splidejs/splide/dist/css/splide.min.css'; */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,6 +8,18 @@
   body {
     font-size: 1rem;
     font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  }
+
+  button,
+  [role='button'] {
+    transition: 250ms ease-in-out;
+  }
+  button:not(#get-app-button):hover,
+  [role='button']:hover {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  #get-app-button:hover {
+    transform: translate(-50%, -50%) scale3d(1.05, 1.05, 1.05);
   }
 }
 
@@ -250,5 +262,19 @@
 
   to {
     transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse-translated {
+  from {
+    transform: translate(-50%, -50%) scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale3d(1, 1, 1);
   }
 }
