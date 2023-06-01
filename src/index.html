@@ -56,24 +56,24 @@
 
     <header
       id="home"
-      class="bg-[url(img/hero-bg.png?as=webp&quality=100)] bg-cover bg-center bg-no-repeat pt-32 px-2 sm:pt-52 text-white text-center"
+      class="bg-[url(img/hero-bg.svg)] bg-cover bg-center bg-no-repeat pt-32 px-2 sm:pt-52 text-white text-center"
     >
-      <h1 class="max-w-[27ch] mx-auto text-[2.5em] xs:text-[3em] font-bold leading-tight sm:leading-snug">
+      <h1 class="max-w-[27ch] mx-auto text-[2.5em] xs:text-[3em] font-bold leading-tight sm:leading-snug" data-animation="fade-from-top" data-delay="500ms">
         Choose a&nbsp;better way to&nbsp;represent your app
       </h1>
-      <p class="mt-3 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <p class="mt-3 mb-6" data-animation="fade-in" data-duration="1s" data-delay="500ms">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
       <div class="flex gap-4 flex-wrap justify-center">
-        <button class="btn-primary">Download free</button>
-        <button class="btn-secondary">Contact Us</button>
+        <button class="btn-primary" data-animation="fade-from-left" data-delay="500ms">Download free</button>
+        <button class="btn-secondary" data-animation="fade-from-right" data-delay="500ms">Contact Us</button>
       </div>
-      <img src="img/Smartphone.png" alt="Smartphone" class="mx-auto mt-20"/>
+      <img src="img/Smartphone.png?as=webp" alt="Smartphone" class="mx-auto mt-20"/>
     </header>
 
     <section class="marketing-section">
      
-      <img src="img/Smartphone.png" alt="Smartphone" class="max-h-[400px] sm:max-h-[500px]"/>
+      <img src="img/Smartphone.png" alt="Smartphone" class="max-h-[400px] sm:max-h-[500px]" data-animation="fade-from-left" data-delay="300ms"/>
       <!-- container -->
-      <div class="marketing-container">
+      <div class="marketing-container" data-animation="fade-from-right" data-delay="300ms">
         <div class="marketing-child top-left">
           <img src="img/icons/cart.png" alt="shop cart icon" />
           <h2 class="h3">First 7 days free</h2>
@@ -114,7 +114,7 @@
       class="mx-auto grid max-w-7xl gap-6 px-4 py-20 md:grid-cols-2 md:gap-0"
     >
       <div
-        class="mr-[16.666667%] grid auto-rows-min place-content-center text-right"
+        class="mr-[16.666667%] grid auto-rows-min place-content-center text-right" data-animation="fade-from-left" data-delay="300ms"
       >
         <h2 class="h2 mb-5 mt-auto">Stable And Ready</h2>
         <p class="mb-4">
@@ -129,7 +129,7 @@
           Download Free
         </button>
       </div>
-      <div class="grid gap-4">
+      <div class="grid gap-4" data-animation="fade-from-right" data-delay="300ms">
         <div class="flex gap-4 p-4 shadow-md">
           <!-- heart -->
           <svg width="30px" height="26px">
@@ -192,10 +192,10 @@
       class="mx-auto grid max-w-7xl justify-items-center gap-8 px-[5%] py-10 lg:grid-cols-2"
     >
       <img
-        src="img/Code-Illustration.png?as=webp"
-        alt="Some code in an editor"
+        src="img/code-editor.svg"
+        alt="Some code in an editor" data-animation="fade-from-left" data-delay="300ms"
       />
-      <div>
+      <div data-animation="fade-from-right" data-delay="300ms">
         <h2 class="h2">Everything You Need</h2>
         <div class="mb-3 mt-7 flex items-center gap-4">
           <div
@@ -231,7 +231,7 @@
       </div>
     </section>
     <section
-      class="relative bg-[url(img/bg2.png?as=webp&quality=100)] bg-cover bg-center bg-no-repeat py-20"
+      class="relative bg-[url(img/bg2.svg)] bg-cover bg-center bg-no-repeat py-20"
     >
       <div
         class="grid items-center justify-items-center gap-4 px-[5%] sm:grid-cols-[40%_1fr] md:grid-cols-2"
@@ -240,8 +240,10 @@
           src="img/Smartphone.png"
           alt="Smartphone"
           class="max-h-[400px] sm:max-h-[500px]"
+          data-animation="fade-from-left"
+          data-delay="300ms"
         />
-        <div>
+        <div data-animation="fade-from-right" data-delay="300ms">
           <h2 class="h2 text-white">Now Available</h2>
           <p class="max-w-prose">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias,
@@ -255,6 +257,9 @@
               href="#"
               role="button"
               aria-label="Get the app in IOS store"
+              data-animation="pulse"
+              data-timing-function="ease-in-out"
+              data-delay="700ms"
               ><img src="img/ios-button.png?as=webp" alt="IOS store button"
             /></a>
             <a
@@ -262,6 +267,9 @@
               href="#"
               role="button"
               aria-label="Get the app in google play store"
+              data-animation="pulse"
+              data-timing-function="ease-in-out"
+              data-delay="1s"
               ><img
                 src="img/Google-play-button.png?as=webp"
                 alt="google play store button"
@@ -270,6 +278,8 @@
         </div>
       </div>
       <button
+        data-animation="fade-in"
+        data-delay="1.2s"
         class="absolute left-1/2 top-full block -translate-x-1/2 -translate-y-1/2 bg-gradient-to-t from-[#f5317f] to-[#ff7c6e] px-12 py-3 font-bold text-white"
       >
         GET THE APP TODAY
