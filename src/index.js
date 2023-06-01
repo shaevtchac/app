@@ -1,4 +1,11 @@
 import { Splide } from '@splidejs/splide';
+document.fonts.ready.then(
+  () => {
+    document.body.classList.remove('font-system');
+    document.body.classList.add('font-workSans');
+  },
+  (err) => console.error(err)
+);
 
 // _______________________________________________________________ menu _______________________________________________________________
 

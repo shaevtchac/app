@@ -23,6 +23,14 @@ module.exports = {
       },
       fontFamily: {
         workSans: ['Work Sans', 'sans-serif'],
+        system: [
+          'system-ui',
+          'Segoe UI',
+          'Roboto',
+          'Helvetica',
+          'Arial',
+          'sans-serif',
+        ],
       },
     },
   },
