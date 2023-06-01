@@ -29,6 +29,51 @@
 @layer utilities {
 }
 
+.marketing-section {
+  @apply relative -mt-64 grid items-center justify-items-center gap-4 px-[5%] pb-14 pt-64 sm:grid-cols-[40%_1fr] md:grid-cols-2 xl:grid-cols-[40%_1fr];
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='1440' height='1246px' %3E%3Cpath fill-rule='evenodd' fill='rgb(250, 250, 252)' d='M1359.122,9.187 C1286.205,8.770 1279.702,69.137 1133.788,70.833 C968.955,72.749 991.122,150.640 884.455,150.223 L563.500,150.223 C456.834,150.640 478.1000,72.749 314.167,70.833 C168.254,69.137 161.750,8.770 88.834,9.187 C62.214,9.338 30.527,10.141 -0.000,0.005 L-0.000,1246.004 L1440.000,1246.004 L1440.000,2.401 C1411.977,10.007 1383.436,9.325 1359.122,9.187 Z' /%3E%3C/svg%3E");
+  background-position-x: center;
+  background-position-y: top;
+  background-size: cover;
+}
+
+.marketing-container {
+  @apply grid gap-4;
+}
+
+.marketing-child {
+  @apply grid justify-items-center gap-4 bg-white p-4 text-center shadow-md;
+}
+
+@media screen and (min-width: 1280px) {
+  .marketing-container {
+    gap: 0;
+
+    grid-template-areas:
+      '. a a . . .'
+      '. a a . b b'
+      '. . . . b b'
+      'c c . . . .'
+      'c c . d d .'
+      '. . . d d .';
+    grid-template-rows: 1fr 2fr 1fr 1fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr 1fr 2fr 1fr;
+  }
+
+  .top-left {
+    grid-area: a;
+  }
+  .top-right {
+    grid-area: b;
+  }
+  .bottom-left {
+    grid-area: c;
+  }
+  .bottom-right {
+    grid-area: d;
+  }
+}
+
 /* __________________________________________________________________________ menu ___________________________________________________________ */
 .nav {
   --transition-duration: 250ms;

@@ -56,22 +56,25 @@
 
     <header
       id="home"
-      class="bg-[url(img/hero-bg.png?as=webp&quality=100)] bg-cover bg-center bg-no-repeat pt-52 text-white"
+      class="bg-[url(img/hero-bg.png?as=webp&quality=100)] bg-cover bg-center bg-no-repeat pt-32 px-2 sm:pt-52 text-white text-center"
     >
-      <h1 class="text-[3em] font-bold">
-        Choose a better way to represent your app
+      <h1 class="max-w-[27ch] mx-auto text-[2.5em] xs:text-[3em] font-bold leading-tight sm:leading-snug">
+        Choose a&nbsp;better way to&nbsp;represent your app
       </h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      <button class="btn-primary">Download free</button>
-      <button class="btn-secondary">Contact Us</button>
-      <img src="img/Smartphone.png" alt="Smartphone" />
+      <p class="mt-3 mb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <div class="flex gap-4 flex-wrap justify-center">
+        <button class="btn-primary">Download free</button>
+        <button class="btn-secondary">Contact Us</button>
+      </div>
+      <img src="img/Smartphone.png" alt="Smartphone" class="mx-auto mt-20"/>
     </header>
 
-    <section>
-      <img src="img/Smartphone.png" alt="Smartphone" />
+    <section class="marketing-section">
+     
+      <img src="img/Smartphone.png" alt="Smartphone" class="max-h-[400px] sm:max-h-[500px]"/>
       <!-- container -->
-      <div>
-        <div>
+      <div class="marketing-container">
+        <div class="marketing-child top-left">
           <img src="img/icons/cart.png" alt="shop cart icon" />
           <h2 class="h3">First 7 days free</h2>
           <p>
@@ -79,7 +82,7 @@
             voluptatibus nihil est doloremque nostrum hic.
           </p>
         </div>
-        <div>
+        <div class="marketing-child top-right">
           <img src="img/icons/desktop.png" alt="computer screen icon" />
           <h2 class="h3">Fully Supported</h2>
           <p>
@@ -87,7 +90,7 @@
             minus dolor fugiat molestiae excepturi?
           </p>
         </div>
-        <div>
+        <div class="marketing-child bottom-left">
           <img src="img/icons/paint.png" alt="Paint roller" />
           <h2 class="h3">Modern flat design</h2>
           <p>
@@ -95,7 +98,7 @@
             odit sequi iste, eius libero provident?
           </p>
         </div>
-        <div>
+        <div class="marketing-child bottom-right">
           <img src="img/icons/smartphone.png" alt="smartfone icon" />
           <h2 class="h3">User Friendly</h2>
           <p>
@@ -104,21 +107,30 @@
           </p>
         </div>
       </div>
+      </div>
     </section>
 
-    <section>
-      <div>
-        <h2 class="h2">Stable And Ready</h2>
-        <p>
+    <section
+      class="mx-auto grid max-w-7xl gap-6 px-4 py-20 md:grid-cols-2 md:gap-0"
+    >
+      <div
+        class="mr-[16.666667%] grid auto-rows-min place-content-center text-right"
+      >
+        <h2 class="h2 mb-5 mt-auto">Stable And Ready</h2>
+        <p class="mb-4">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio alias
           eveniet id velit repudiandae. Numquam, expedita? Voluptas praesentium,
           temporibus a nisi sed illum? Molestiae maxime impedit totam temporibus
           alias ut.
         </p>
-        <button class="btn-primary">Download Free</button>
+        <button
+          class="justify-self-end rounded-lg bg-primary px-8 py-2 font-bold text-white"
+        >
+          Download Free
+        </button>
       </div>
-      <div>
-        <div>
+      <div class="grid gap-4">
+        <div class="flex gap-4 p-4 shadow-md">
           <!-- heart -->
           <svg width="30px" height="26px">
             <path
@@ -129,18 +141,24 @@
           </svg>
           <h3 class="h3">Made With Love</h3>
         </div>
-        <div>
+        <div class="bg-primary p-4 shadow-md">
           <!-- label -->
-          <svg width="16px" height="31px">
-            <path
-              fill-rule="evenodd"
-              fill="rgb(44, 50, 51)"
-              d="M15.018,17.258 C14.779,13.362 11.990,10.178 8.370,9.745 L8.370,9.474 C8.337,8.653 7.894,7.944 7.174,7.555 L3.657,5.828 C3.483,5.778 3.191,5.309 3.224,5.132 L3.224,3.792 C3.224,3.673 3.330,3.564 3.449,3.564 L8.936,3.564 L8.936,4.042 C8.937,5.053 9.756,5.869 10.768,5.872 L12.175,5.872 C13.185,5.869 14.004,5.053 14.006,4.042 L14.006,2.633 C14.004,1.623 13.185,0.804 12.175,0.801 L10.768,0.803 C9.905,0.804 9.189,1.400 8.994,2.202 L3.449,2.202 C2.571,2.205 1.861,2.912 1.860,3.792 L1.860,5.132 C1.891,5.953 2.334,6.662 3.055,7.053 L6.572,8.778 C6.746,8.829 7.037,9.296 7.006,9.474 L7.006,9.722 C3.246,10.015 0.317,13.261 0.070,17.258 L0.053,17.258 L0.053,28.253 C0.055,29.762 1.279,30.989 2.791,30.991 L12.299,30.991 C13.809,30.989 15.033,29.762 15.035,28.253 L15.035,17.258 L15.018,17.258 ZM10.300,2.633 C10.301,2.380 10.516,2.167 10.768,2.167 L12.175,2.167 C12.426,2.167 12.641,2.380 12.643,2.633 L12.643,4.042 C12.641,4.293 12.426,4.508 12.175,4.508 L10.768,4.509 C10.516,4.508 10.301,4.293 10.300,4.042 L10.300,2.633 ZM8.297,15.483 C8.548,15.483 8.762,15.696 8.762,15.949 L8.762,17.358 C8.762,17.608 8.548,17.822 8.297,17.825 L6.888,17.825 C6.636,17.822 6.422,17.608 6.422,17.358 L6.422,15.949 C6.422,15.696 6.636,15.483 6.888,15.483 L8.297,15.483 ZM13.671,18.622 L13.671,28.253 C13.669,29.004 13.049,29.625 12.299,29.627 L2.791,29.627 C2.040,29.625 1.420,29.004 1.418,28.253 L1.418,18.622 L1.425,18.622 L1.425,17.938 C1.422,17.829 1.416,17.789 1.418,17.789 C1.422,14.231 3.913,11.391 7.006,11.087 L7.006,14.119 L6.888,14.119 C5.876,14.120 5.059,14.936 5.058,15.949 L5.058,17.358 C5.059,18.370 5.876,19.184 6.888,19.189 L8.297,19.188 C9.307,19.184 10.124,18.370 10.126,17.358 L10.126,15.949 C10.124,14.962 9.346,14.167 8.370,14.125 L8.370,11.127 C11.328,11.573 13.669,14.343 13.671,17.789 L13.672,17.789 C13.672,17.789 13.666,17.829 13.665,17.938 L13.665,18.622 L13.671,18.622 Z"
-            />
-          </svg>
-          <h3 class="h3">Free for Use</h3>
+          <div class="mb-3 flex gap-4">
+            <svg width="16px" height="31px">
+              <path
+                fill-rule="evenodd"
+                fill="rgb(44, 50, 51)"
+                d="M15.018,17.258 C14.779,13.362 11.990,10.178 8.370,9.745 L8.370,9.474 C8.337,8.653 7.894,7.944 7.174,7.555 L3.657,5.828 C3.483,5.778 3.191,5.309 3.224,5.132 L3.224,3.792 C3.224,3.673 3.330,3.564 3.449,3.564 L8.936,3.564 L8.936,4.042 C8.937,5.053 9.756,5.869 10.768,5.872 L12.175,5.872 C13.185,5.869 14.004,5.053 14.006,4.042 L14.006,2.633 C14.004,1.623 13.185,0.804 12.175,0.801 L10.768,0.803 C9.905,0.804 9.189,1.400 8.994,2.202 L3.449,2.202 C2.571,2.205 1.861,2.912 1.860,3.792 L1.860,5.132 C1.891,5.953 2.334,6.662 3.055,7.053 L6.572,8.778 C6.746,8.829 7.037,9.296 7.006,9.474 L7.006,9.722 C3.246,10.015 0.317,13.261 0.070,17.258 L0.053,17.258 L0.053,28.253 C0.055,29.762 1.279,30.989 2.791,30.991 L12.299,30.991 C13.809,30.989 15.033,29.762 15.035,28.253 L15.035,17.258 L15.018,17.258 ZM10.300,2.633 C10.301,2.380 10.516,2.167 10.768,2.167 L12.175,2.167 C12.426,2.167 12.641,2.380 12.643,2.633 L12.643,4.042 C12.641,4.293 12.426,4.508 12.175,4.508 L10.768,4.509 C10.516,4.508 10.301,4.293 10.300,4.042 L10.300,2.633 ZM8.297,15.483 C8.548,15.483 8.762,15.696 8.762,15.949 L8.762,17.358 C8.762,17.608 8.548,17.822 8.297,17.825 L6.888,17.825 C6.636,17.822 6.422,17.608 6.422,17.358 L6.422,15.949 C6.422,15.696 6.636,15.483 6.888,15.483 L8.297,15.483 ZM13.671,18.622 L13.671,28.253 C13.669,29.004 13.049,29.625 12.299,29.627 L2.791,29.627 C2.040,29.625 1.420,29.004 1.418,28.253 L1.418,18.622 L1.425,18.622 L1.425,17.938 C1.422,17.829 1.416,17.789 1.418,17.789 C1.422,14.231 3.913,11.391 7.006,11.087 L7.006,14.119 L6.888,14.119 C5.876,14.120 5.059,14.936 5.058,15.949 L5.058,17.358 C5.059,18.370 5.876,19.184 6.888,19.189 L8.297,19.188 C9.307,19.184 10.124,18.370 10.126,17.358 L10.126,15.949 C10.124,14.962 9.346,14.167 8.370,14.125 L8.370,11.127 C11.328,11.573 13.669,14.343 13.671,17.789 L13.672,17.789 C13.672,17.789 13.666,17.829 13.665,17.938 L13.665,18.622 L13.671,18.622 Z"
+              />
+            </svg>
+            <h3 class="h3">Free for Use</h3>
+          </div>
+          <p class="text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem
+            optio labore eos quia consequatur assumenda.
+          </p>
         </div>
-        <div>
+        <div class="flex gap-4 p-4 shadow-md">
           <!-- work bag -->
           <svg width="31px" height="28px">
             <path
@@ -151,7 +169,7 @@
           </svg>
           <h3 class="h3">Full support Available</h3>
         </div>
-        <div>
+        <div class="flex gap-4 p-4 shadow-md">
           <!-- pen -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -395,17 +413,6 @@
     </footer>
 
     <!-- marketing bg -->
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      xmlns:xlink="http://www.w3.org/1999/xlink"
-      width="100%"
-      height="1246px"
-    >
-      <path
-        fill-rule="evenodd"
-        fill="rgb(250, 250, 252)"
-        d="M1359.122,9.187 C1286.205,8.770 1279.702,69.137 1133.788,70.833 C968.955,72.749 991.122,150.640 884.455,150.223 L563.500,150.223 C456.834,150.640 478.1000,72.749 314.167,70.833 C168.254,69.137 161.750,8.770 88.834,9.187 C62.214,9.338 30.527,10.141 -0.000,0.005 L-0.000,1246.004 L1440.000,1246.004 L1440.000,2.401 C1411.977,10.007 1383.436,9.325 1359.122,9.187 Z"
-      />
-    </svg>
+    
   </body>
 </html>
